@@ -30,12 +30,13 @@ This project can request information from the API Server such as new, updated or
 
 **You must only do these steps if you have NOT done it before, and if you meet the specified conditions mentioned in each point.** Otherwise, you can skip this section.
 
-* You need to install this project using the command `go get` to resolve its dependencies. Run this command (it might take a while, be patient):
+The first thing you have to do is clone the project on your machine:
 ```
-root@pc: go get -u github.com/zevenet/kube-nftlb/...
+root@pc: git clone https://github.com/David-concejero/kube-nftlb
 ```
 * This is a mandatory step if you started Minikube with `--vm-driver=none`, and you mustn't do it if that's not your case. `coredns` won't be able to resolve external hostnames unless you run this command:
 ```
+root@pc: cd kube-nftlb
 root@pc: kubectl apply -f yaml/give_internet_access_to_pods.yaml
 ```
 * The cluster needs a `kube-nftlb` privileged rol, because in order to use `kube-nftlb` for communicating the API Server, it needs to be recognised and authenticated by the API Server. Run this command:

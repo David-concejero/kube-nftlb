@@ -56,7 +56,7 @@ root@pc: watch -n 1 nft list table nftlb
 2. Open another terminal. To get inside the project directory, run these commands:
 ```
 user@pc: su
-root@pc: cd ~/go/src/github.com/zevenet/kube-nftlb/
+root@pc: cd ~/David-concejero/kube-nftlb/
 ```
 
 3. The script `build.sh` will compile `main.go` and will build a Docker container to put it inside the cluster. **Before running it, you MUST read the script. And be careful, all `nftables` rules you may have set could be flushed**. Once you have read it and adapted it to your use case, run:
